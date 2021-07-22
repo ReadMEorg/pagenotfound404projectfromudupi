@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read.me</title>
+    <link rel="stylesheet" href="~/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="~/css/layoutStyle.css">
+    <link rel="stylesheet" href="~/css/@ViewBag.style">
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/animation.js"></script>
+</head>
+<body>
+    <div class="layer"></div>
+    <header>
+
+        <div class="main-menu">
+            <button class="mobile-menu"><i class="fa fa-bars"></i></button>
+            <h1><span><i class="fa fa-dice-d6"></i> </span>Read.me</h1>
+
+            <nav>
+                <button class="close-nav"><i class="fa fa-times"></i></button>
+                <ul>
+                    <a href="/" class="homeNav">
+                        <li>Home</li>
+                        <div class="hover active"></div>
+                    </a>
+                    <a href="/upload" class="uploadNav">
+                        <li>Upload</li>
+                        <div class="hover"></div>
+                    </a>
+                    <a href="/login" class="loginNav">
+                        <li>Login</li>
+                        <div class="hover"></div>
+                    </a>
+                    <a href="/about-us" class="aboutUsNav">
+                        <li>About us</li>
+                        <div class="hover"></div>
+                    </a>
+                    <a href="/edu-hub" class="eduHubNav">
+                        <li>EDU-hub</li>
+                        <div class="hover"></div>
+                    </a>
+                    <a href="/free" class="free-nav">
+                        <li><span> FREE <i class="fa fa-angle-right"></i></span></li>
+                    </a>
+                </ul>
+            </nav>
+
+        </div>
+        @if (@ViewBag.search)
+        {
+            <div class="search">
+                <div class="search-bar">
+                    <input type="text" placeholder="Let's discover..." />
+                    <a href=""><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+        }
+
+        @if (@ViewBag.message)
+        {
+            @if (@ViewBag.success!=null)
+            {
+                <div class="success-message">
+                    <p><span><i class="fa fa-check-circle"></i></span>@ViewBag.success</p><button><i class="fa fa-times"></i></button>
+                </div>
+            }
+
+            @if (@ViewBag.error!=null)
+            {
+                <div class="error-message">
+                    <p><span><i class="fa fa-ban"></i></span>@ViewBag.error</p><button><i class="fa fa-times"></i></button>
+                </div>
+            }
+
+        }
+
+    </header>
+
+            @RenderBody()
+
+   <footer>
+       @* <div class="quote">
+           <p>Read on Read.me</p>
+       </div> *@
+       <div>
+            <p><span><i class="fa fa-copyright"></i> </span>Copyright 2021, <span>All rights reserved</span></p>
+       </div>
+   </footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+﻿
+
+.container {
+    position: absolute;
+    margin-top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px;
+    box-shadow: 0px 0px 10px 1px #dbdbdb;
+    border-radius: 20px;
+    min-width: 300px;
+    width: 50vw;
+    max-width: 450px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+    .container h2 {
+        color: #36128a;
+        font-size: 17px;
+    }
+
+
+    .container .wrapper {
+        position: relative;
+        height: 80px;
+    }
+
+.wrapper label {
+    position: absolute;
+    top: 35px;
+    font-size: 12px;
+    left: 18%;
+    /* transform: translateX(-50%); */
+    color: #a5a5a5e7;
+    transition: .3s ease-in-out;
+}
+
+.container form {
+    margin-top: 30px;
+}
+
+.wrapper input[type="text"], .wrapper input[type="password"] {
+    position: absolute;
+    width: 250px;
+    top: 39%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #7c64d3;
+}
+
+.wrapper input:focus {
+    border-bottom: 1px solid #0a018546;
+}
+
+
+input:focus ~ label,
+input:valid ~ label {
+    color: #494949;
+    top: 14px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.logo {
+    position: absolute;
+    right: 20%;
+    top: 30%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #585858;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.offLogo {
+    display: none;
+}
+
+
+
+
+
+.submitWrapper input[type="submit"], .signupSubmitWrapper input[type="submit"] {
+    background: #2d037c;
+    border: 1px solid transparent;
+    color: white;
+    width: 100px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: .3s ease-in-out;
+}
+    /* 2d037c 272727 */
+    .wrapper input[type="submit"]:hover, .signupSubmitWrapper input[type="submit"]:hover {
+        background: #272727;
+        color: #ffffff;
+    }
+
+.submitWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.signupForm {
+    margin-top: -20px;
+}
+
+
+.signup-btn-wrapper {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 18%;
+    list-style: none;
+}
+
+
+
+
+
+@media screen and (max-width:650px) {
+
+    .wrapper input {
+        width: 210px;
+    }
+
+    .wrapper label {
+        left: 0px;
+    }
+}
+
+
+

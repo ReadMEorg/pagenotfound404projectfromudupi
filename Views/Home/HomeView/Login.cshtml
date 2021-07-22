@@ -1,0 +1,69 @@
+@model ReadME.Models.AuthData;
+
+<div class="container">
+    <h2 class="loginHeader">Welco<span>me</span></h2>
+    <div class="action">
+        <ul>
+            <li><button class="loginButton">Login</button></li>
+            <li><button class="signupButton">Sign Up</button></li>
+        </ul>
+    </div>
+    <div class="loginForm">
+
+        <form method="post" id="form-login" action="/login" novalidate>
+            <div class="wrapper">
+                <input type="text" id="username" asp-for="Email" required />
+                <label for="username" id="usernameLabel">E-mail Address</label>
+            </div>
+            <div class="wrapper">
+                <input type="password" id="password" asp-for="Password" required />
+
+                <label for="password" id="passwordLabel">Password</label>
+
+                <button type="button" class="logo"><i class="fa fa-eye"></i></button>
+                <button type="button" class="logo offLogo"><i class="fa fa-eye-slash"></i></button>
+            </div>
+            <div class="wrapper submitWrapper ">
+                <ul class="login-btn-wrapper">
+                    <li><input type="submit" value="Login"></li>
+                    <li><a href="/forgot" class="forgotpass">Forgot Password</a></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <div class="signupForm">
+
+        <form id="form-signup" method="post" action="/signup" novalidate>
+            <div class="wrapper">
+                <input type="text" id="reg-username" asp-for="Username" required />
+                <label for="reg-username" id="reg-usernameLabel">Username</label>
+            </div>
+            <div class="wrapper">
+                <input type="text" id="reg-email" asp-for="Email" required />
+                <label for="reg-email" id="reg-emailLabel">E-mail Address</label>
+            </div>
+            <div class="wrapper">
+                <input type="password" id="reg-password" asp-for="Password" required />
+                <label for="reg-password" id="reg-passwordLabel">Password</label>
+
+                <button type="button" class="logo"><i class="fa fa-eye"></i></button>
+                <button type="button" class="logo offLogo"><i class="fa fa-eye-slash"></i></button>
+            </div>
+            <div class="wrapper">
+                <input type="password" id="reg-confpass" asp-for="ConfPassword" required />
+                <label for="reg-confpass" id="reg-confpassLabel">Confirm Password</label>
+
+                <button type="button" class="logo"><i class="fa fa-eye"></i></button>
+                <button type="button" class="logo offLogo"><i class="fa fa-eye-slash"></i></button>
+            </div>
+            <div class="signupSubmitWrapper">
+                <ul class="signup-btn-wrapper">
+                    <li><input type="submit" value="Sign Up"></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>
+
+

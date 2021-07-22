@@ -1,0 +1,29 @@
+﻿
+@model ReadME.Models.OTPData; 
+<div class="container">
+    <div class="main-timer"><h2><span id="min">4</span> : <span id="sec">59</span></h2></div>
+    <h2>OTP Verification</h2>
+    <div class="otp">
+        <form action="/fverify/@ViewBag.userId" method="post">
+            <div>
+                <input type="number" id="otp-1" asp-for="dig1" required>
+                <input type="number" id="otp-2" asp-for="dig2" required>
+                <input type="number" id="otp-3" asp-for="dig3" required>
+                <input type="number" id="otp-4" asp-for="dig4" required>
+                <input type="number" id="otp-5" asp-for="dig5" required>
+                <input type="number" id="otp-6" asp-for="dig6" required>
+            </div>
+            <div class="otp-helper">
+                <div>
+                    <button class="otp-verify-btn" type="submit" disabled="true">Verify</button>
+                </div>
+                <div class="otp-resend">
+                    <p>Resend OTP in <span id="timer25">25</span>s</p>
+                    <a href="/fresend/@ViewBag.userId">Resend</a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+

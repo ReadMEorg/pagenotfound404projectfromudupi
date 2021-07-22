@@ -1,0 +1,14 @@
+﻿@model ReadME.Models.ForgotData;
+
+<div class="container">
+    <h2>Verify your E-mail</h2>
+    <div class="fp-email">
+        <div>
+            <form action="/forgot" method="post" novalidate id="form-forgotpassword">
+                <input type="text" id="fp-input" asp-for="Email" required>
+                <label for="fp-input" id="fp-emailLabel">E-mail Address</label>
+                <button><i class="fa fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
